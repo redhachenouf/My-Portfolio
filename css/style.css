@@ -1,15 +1,21 @@
-/* Général */
+/* Global Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #0d1117; /* Couleur sombre pour un look moderne */
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
     color: #c9d1d9;
     line-height: 1.6;
 }
 
-/* Header */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
 .header {
-    background-color: #161b22;
+    background: #161b22;
     padding: 20px 0;
 }
 
@@ -35,7 +41,7 @@ body {
     color: #ffffff;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 0;
@@ -52,17 +58,7 @@ body {
     margin: 10px 0;
 }
 
-/* Sections */
-section {
-    padding: 40px 20px;
-}
-
-h2 {
-    text-align: center;
-    color: #58a6ff;
-}
-
-/* Projets */
+/* Projects Section */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -79,7 +75,7 @@ h2 {
 .project img {
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 /* Footer */
@@ -88,13 +84,4 @@ h2 {
     text-align: center;
     padding: 20px 0;
     color: #8b949e;
-}
-
-.footer a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
 }
