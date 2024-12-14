@@ -18,4 +18,3 @@ Ce portfolio est dédié à présenter mes compétences, mes projets récents, a
 
 ## 📫 Contact
 - [LinkedIn](https://www.linkedin.com/in/redha-c-75187032a/)  
-- 📧 Email : redha.chenouf2003@gmail.com
