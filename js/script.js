@@ -1,15 +1,14 @@
-// Menu toggle for responsive navbar
-document.querySelector('.logo img').addEventListener('click', () => {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('active');
+// Ajouter une animation au défilement
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = 0;
+    section.style.transition = 'opacity 1s';
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+window.addEventListener('scroll', () => {
+    document.querySelectorAll('section').forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 1.5) {
+            section.style.opacity = 1;
+        }
     });
 });
