@@ -1,23 +1,20 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $name = htmlspecialchars($_POST["name"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $message = htmlspecialchars($_POST["message"]);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nom = htmlspecialchars($_POST['nom']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
 
-    $to = "r.chenouf@outlook.com"; // Remplace par ton adresse email
-    $subject = "Nouveau message du formulaire de contact";
-    $body = "Nom : $name\n";
-    $body .= "Email : $email\n\n";
-    $body .= "Message :\n$message\n";
-
+    $to = "r.chenouf@outlook.com"; // Change cet email
+    $subject = "Nouveau message de contact - Portfolio";
+    $body = "Nom: $nom\nEmail: $email\n\nMessage:\n$message";
     $headers = "From: $email";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Votre message a bien été envoyé.";
+        echo "Message envoyé avec succès.";
     } else {
-        echo "Une erreur s'est produite. Veuillez réessayer.";
+        echo "Échec de l'envoi du message. Veuillez réessayer.";
     }
 } else {
-    echo "Méthode non autorisée.";
+    echo "Accès non autorisé.";
 }
 ?>

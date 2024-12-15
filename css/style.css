@@ -1,238 +1,160 @@
-/* Importation des polices */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Réinitialisation globale */
+/* Reset et Styles Globaux */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Couleurs principales */
-:root {
-    --text-color: #ffffff;
-    --background-color: #000000;
-    --primary-color: #ff0000; /* Rouge */
-    --secondary-color: #007bff; /* Bleu */
-}
-
-/* Corps global */
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #fff;
+    color: #333;
     line-height: 1.6;
-    font-size: 16px;
 }
 
-/* Navigation */
-.navbar {
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: #000000;
+    padding: 15px 30px;
+    background-color: #ffdbb6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar .logo {
-    color: var(--text-color);
-    font-size: 1.5rem;
-    font-weight: 600;
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.nav-links {
+header ul {
+    display: flex;
     list-style: none;
-    display: flex;
-    gap: 20px;
 }
 
-.nav-links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 400;
+header ul li {
+    margin-left: 20px;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
+header ul li a {
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Section Hero */
-#hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 10%;
-    background: var(--background-color);
+header ul li a:hover {
+    color: #ff8c42;
 }
 
-.hero-content {
+/* Hero Section */
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 50px 30px;
+    background: linear-gradient(to bottom, #ffdbb6, #fff);
 }
 
-.hero-content .text h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--text-color);
+.hero .content {
+    max-width: 50%;
 }
 
-.hero-content .text h1 .red-line {
-    color: var(--primary-color);
-    text-decoration: underline;
+.hero h1 {
+    font-size: 3rem;
+    color: #333;
 }
 
-.hero-content .text h1 .blue-line {
-    color: var(--secondary-color);
-    text-decoration: underline;
+.hero h1 .orange {
+    color: #ff8c42;
 }
 
-.hero-content h2 {
-    font-size: 1.5rem;
-    color: var(--text-color);
-    margin: 10px 0;
-}
-
-.hero-content p {
-    font-size: 1rem;
-    margin: 20px 0;
-}
-
-.buttons .btn {
-    background: var(--primary-color);
-    color: var(--text-color);
-    padding: 10px 20px;
-    text-decoration: none;
+.hero .buttons .btn {
+    display: inline-block;
+    margin-top: 20px;
     margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #ff8c42;
+    color: #fff;
     border-radius: 5px;
-    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.buttons .btn:hover {
-    background: var(--secondary-color);
+.hero .buttons .btn:hover {
+    background-color: #333;
 }
 
-/* Photo de Profil */
-.profile-pic img {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid var(--primary-color);
+/* Sections Générales */
+section {
+    padding: 50px 30px;
 }
 
-/* Section Projets */
-#projects {
-    padding: 50px 10%;
-    background: var(--background-color);
-}
-
-#projects h2 {
+section h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
+    color: #333;
     margin-bottom: 30px;
 }
 
-.project-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+/* Cards */
+.projects-grid, .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-.project-card {
-    background: #1e1e1e;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 30%;
-    text-align: center;
+.project-card, .skill-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     padding: 20px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.project-card:hover {
+.project-card:hover, .skill-card:hover {
     transform: translateY(-10px);
 }
 
-.project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 1rem;
-    color: #ddd;
-}
-
-/* Section Contact */
-#contact {
-    padding: 50px 10%;
-    text-align: center;
-    background: var(--background-color);
-}
-
-#contact h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
+/* Formulaire */
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-form input,
-form textarea {
-    width: 100%;
-    max-width: 500px;
+form input, form textarea {
     padding: 10px;
-    border: 2px solid var(--primary-color);
-    background: #1e1e1e;
-    color: var(--text-color);
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 form button {
-    background: var(--primary-color);
-    color: var(--text-color);
-    padding: 10px 20px;
+    padding: 10px;
+    background-color: #ff8c42;
+    color: white;
     border: none;
-    cursor: pointer;
-    font-size: 1rem;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 form button:hover {
-    background: var(--secondary-color);
+    background-color: #333;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #111111;
-    color: var(--text-color);
-}
-
-/* Animation d'apparition */
-.project-card {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-in-out;
-}
-
-.project-card.visible {
-    opacity: 1;
-    transform: translateY(0);
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
