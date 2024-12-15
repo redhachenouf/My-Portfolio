@@ -1,0 +1,35 @@
+/* assets/css/projects.css */
+.project-card {
+    background-color: #1a1a1a;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 1em;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+}
+
+.project-title {
+    text-align: center;
+    color: #00ff00;
+    font-size: 1.5em;
+    padding: 1em 0;
+    background: #111111;
+}
+
+.project-description {
+    padding: 1em;
+    color: #ccc;
+    font-family: 'Source Code Pro', monospace;
+}

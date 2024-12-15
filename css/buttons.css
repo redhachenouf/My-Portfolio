@@ -1,0 +1,19 @@
+/* assets/css/buttons.css */
+.btn {
+    background-color: transparent;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', monospace;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 255, 0, 0.5);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #00ff00;
+    color: #1a1a1a;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    transform: scale(1.1);
+}

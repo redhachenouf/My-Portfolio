@@ -1,0 +1,43 @@
+/* assets/css/contact-form.css */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 600px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 1.5em;
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.6);
+    border-radius: 8px;
+}
+
+input, textarea {
+    background: transparent;
+    border: 1px solid #00ff00;
+    color: #f9f9f9;
+    padding: 0.7em;
+    border-radius: 4px;
+    font-family: 'Source Code Pro', monospace;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 8px #00ff00;
+    outline: none;
+}
+
+button {
+    background: #00ff00;
+    color: #1a1a1a;
+    border: none;
+    padding: 0.7em;
+    border-radius: 4px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 1);
+}
