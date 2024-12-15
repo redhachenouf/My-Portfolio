@@ -5,23 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Redha Chenouf</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
-        <div class="logo">RC</div>
-        <nav>
-            <ul>
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#testimonials">Témoignages</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header">
+            <a href="#home">
+                <h2 class="logo">RC</h2>
+            </a>
+            <img src="img/hamburger-icon.png" id="burger" alt="menu-burger">
+            <nav class="navbar">
+                <a href="#projects">Mes projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -31,115 +28,47 @@
             <p>Administrateur réseaux, systèmes & cybersécurité</p>
             <div class="buttons">
                 <a href="cv.pdf" class="btn">Mon CV</a>
-                <a href="https://www.linkedin.com/in/redha-c" class="btn">LinkedIn</a>
-                <a href="https://github.com/redhachenouf" class="btn">GitHub</a>
+                <a href="https://www.linkedin.com/" target="_blank" class="btn">
+                    <img src="img/linkedin-logo.png" alt="LinkedIn"> LinkedIn
+                </a>
+                <a href="https://github.com/" target="_blank" class="btn">
+                    <img src="img/github-logo.png" alt="GitHub"> GitHub
+                </a>
             </div>
         </div>
         <div class="image">
-            <img src="photo-profil.png" alt="Photo de Redha Chenouf">
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>À PROPOS</h2>
-        <p>
-            Passionné par la **cybersécurité**, je me spécialise dans l’administration des systèmes Linux/Windows et la protection des infrastructures réseau. 
-            Ma mission est d’offrir des solutions **performantes** et **sécurisées**.
-        </p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>MES COMPÉTENCES</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Réseaux</h3>
-                <ul>
-                    <li>Configuration VLAN</li>
-                    <li>VPN WireGuard</li>
-                    <li>DMZ & Sécurité</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Pentesting</h3>
-                <ul>
-                    <li>Metasploit</li>
-                    <li>Nmap</li>
-                    <li>Wireshark</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Virtualisation</h3>
-                <ul>
-                    <li>VMware</li>
-                    <li>Docker</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>Outils</h3>
-                <ul>
-                    <li>Burp Suite</li>
-                    <li>OWASP ZAP</li>
-                </ul>
-            </div>
+            <img src="img/pics.png" alt="Redha Chenouf">
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>MES PROJETS</h2>
-        <div class="projects-grid">
+        <div class="projects-container">
             <div class="project-card">
-                <img src="pcs.png" alt="PCS">
+                <img src="img/pcs.png" alt="PCS">
                 <h3>Paris Caretaker Services</h3>
                 <p>Site sécurisé avec Stripe et segmentation réseau.</p>
             </div>
             <div class="project-card">
-                <img src="audit.png" alt="Audit Sécurité">
+                <img src="img/audit.jpg" alt="Audit">
                 <h3>Audit de Sécurité</h3>
-                <p>Analyse des vulnérabilités réseau avec Metasploit.</p>
+                <p>Analyse des vulnérabilités avec Nmap et Metasploit.</p>
             </div>
             <div class="project-card">
-                <img src="navy.png" alt="My Navy">
+                <img src="img/navy.jpg" alt="Navy">
                 <h3>Jeu My Navy</h3>
-                <p>Jeu multijoueur en C avec gestion des connexions réseau.</p>
+                <p>Jeu multijoueur en C avec gestion réseau.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>TÉMOIGNAGES</h2>
-        <div class="testimonial">
-            <p>"Redha a optimisé nos serveurs avec succès. Professionnel et réactif !"</p>
-            <h4>- Entreprise XYZ</h4>
-        </div>
-        <div class="testimonial">
-            <p>"Une analyse précise des vulnérabilités réseau. Excellent travail !"</p>
-            <h4>- Client Sécurité</h4>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>MON EXPÉRIENCE</h2>
-        <div class="experience-card">
-            <h3>Stage - Administrateur Système</h3>
-            <p>Configuration de serveurs, sauvegardes automatisées et sécurisation SSH.</p>
-        </div>
-        <div class="experience-card">
-            <h3>Projet Étudiant</h3>
-            <p>Création d’une DMZ et audit réseau pour garantir la sécurité des flux.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>CONTACT</h2>
-        <form action="contact.php" method="POST">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="nom" placeholder="Votre nom" required>
+        <form action="form.php" method="POST">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" placeholder="Votre email" required>
@@ -151,14 +80,17 @@
         </form>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Redha Chenouf. Tous droits réservés.</p>
-        <div class="footer-socials">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="mailto:r.chenouf@outlook.com">Email</a>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/" target="_blank">
+                <img src="img/linkedin-logo.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/" target="_blank">
+                <img src="img/github-logo.png" alt="GitHub">
+            </a>
         </div>
+        <p>&copy; 2024 Redha Chenouf. Tous droits réservés.</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,60 @@
+/* Styles pour les labels et les champs de formulaire */
+form label {
+    color: #ffdbb6; /* Orange clair */
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+/* Champs de formulaire */
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.2em;
+    border: 2px solid #ffa559; /* Contour orange */
+    border-radius: 5px;
+    background-color: #ffffff; /* Fond blanc doux */
+    color: #333333; /* Texte gris foncé */
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet focus pour les champs */
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #ffdbb6; /* Contour orange clair */
+    box-shadow: 0 0 8px rgba(255, 165, 89, 0.7);
+}
+
+/* Bouton d'envoi */
+form button {
+    margin-top: 2em;
+    padding: 0.8em 1.5em;
+    border: none;
+    background-color: #ffa559; /* Orange vif */
+    color: #ffffff; /* Texte blanc */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Effet hover sur le bouton */
+form button:hover {
+    background-color: #ffdbb6; /* Orange clair */
+    color: #333333; /* Texte gris foncé */
+    transform: scale(1.05);
+}
+
+/* Responsive pour le formulaire */
+@media screen and (max-width: 768px) {
+    form input,
+    form textarea,
+    form button {
+        font-size: 0.9rem;
+    }
+}

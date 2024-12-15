@@ -1,0 +1,171 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background-color: #ffdbb6;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar a {
+    margin-left: 1em;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff8c42;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    background-color: #ffdbb6;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.orange {
+    color: #ff8c42;
+}
+
+.white {
+    color: #fff;
+}
+
+.buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ff8c42;
+    color: #000;
+    padding: 0.8em 1.5em;
+    margin-right: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #000;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buttons .btn img {
+    margin-right: 0.5em;
+    width: 20px;
+    height: 20px;
+}
+
+.buttons .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Projects Section */
+#projects {
+    padding: 2em;
+    background-color: #fff;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.project-card {
+    width: 30%;
+    background-color: #ffdbb6;
+    padding: 1em;
+    border-radius: 8px;
+    border: 2px solid #000;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2em;
+    background-color: #fff;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 0.5em 0 0.2em;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 80%;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+form .btn {
+    background-color: #ff8c42;
+    color: #000;
+    border: 2px solid #000;
+    padding: 0.8em 1.5em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+form .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #ffdbb6;
+    padding: 1em;
+    border-top: 2px solid #000;
+}
+
+.footer-links img {
+    width: 25px;
+    margin: 0 0.5em;
+}
