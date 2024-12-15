@@ -1,27 +1,29 @@
-// Smooth scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// Scroll Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < triggerBottom) {
+                section.classList.add('show');
+            }
         });
     });
 });
 
-// Fade-in animation for sections
-const sections = document.querySelectorAll("section");
+// Smooth Scroll for Navigation Links
+const navLinks = document.querySelectorAll('.nav-links a');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-        }
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
-}, {
-    threshold: 0.2
-});
-
-sections.forEach(section => {
-    section.classList.add("hidden");
-    observer.observe(section);
 });
