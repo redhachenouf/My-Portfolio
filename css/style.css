@@ -1,30 +1,43 @@
-/* Reset */
-body, h1, h2, p, ul, input, textarea {
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Réinitialisation globale */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000;
-    color: #fff;
 }
 
-/* Header */
-header {
+/* Couleurs principales */
+:root {
+    --text-color: #ffffff;
+    --background-color: #000000;
+    --primary-color: #ff0000; /* Rouge */
+    --secondary-color: #007bff; /* Bleu */
+}
+
+/* Corps global */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Navigation */
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
-    background: #000;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+    align-items: center;
+    padding: 10px 20px;
+    background: #000000;
 }
 
-.logo {
-    font-weight: bold;
+.navbar .logo {
+    color: var(--text-color);
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .nav-links {
@@ -34,108 +47,192 @@ header {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 400;
 }
 
 .nav-links a:hover {
-    color: #ff0000;
+    color: var(--primary-color);
 }
 
-/* Hero */
+/* Section Hero */
 #hero {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 100vh;
-    padding: 0 10%;
-    background-color: #0d1117;
+    align-items: center;
+    padding: 50px 10%;
+    background: var(--background-color);
 }
 
-.hero-text {
-    max-width: 50%;
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero-text h1 {
-    font-size: 3.5rem;
+.hero-content .text h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-color);
 }
 
-.hero-text .highlight {
-    color: #58a6ff;
+.hero-content .text h1 .red-line {
+    color: var(--primary-color);
     text-decoration: underline;
-    text-decoration-color: #ff0000;
 }
 
-.hero-image img {
+.hero-content .text h1 .blue-line {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.buttons .btn {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.buttons .btn:hover {
+    background: var(--secondary-color);
+}
+
+/* Photo de Profil */
+.profile-pic img {
     width: 300px;
+    height: auto;
     border-radius: 50%;
-    border: 5px solid #58a6ff;
+    border: 5px solid var(--primary-color);
 }
 
-/* Projects */
-.section-title {
+/* Section Projets */
+#projects {
+    padding: 50px 10%;
+    background: var(--background-color);
+}
+
+#projects h2 {
     text-align: center;
-    font-size: 2rem;
-    margin: 50px 0;
-    color: #ff0000;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
 }
 
 .project-container {
     display: flex;
     justify-content: space-around;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.project {
+.project-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 30%;
     text-align: center;
-    background: #161b22;
     padding: 20px;
-    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.project img {
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
     width: 100%;
-    border-radius: 10px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
-/* Contact */
+.project-card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Section Contact */
 #contact {
+    padding: 50px 10%;
     text-align: center;
-    padding: 50px 0;
+    background: var(--background-color);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 300px;
-    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
 }
 
-input, textarea {
+form input,
+form textarea {
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
-    border: none;
+    border: 2px solid var(--primary-color);
+    background: #1e1e1e;
+    color: var(--text-color);
     border-radius: 5px;
 }
 
-.btn {
-    background: #ff0000;
-    color: #fff;
+form button {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
     border: none;
-    padding: 10px 15px;
     cursor: pointer;
+    font-size: 1rem;
     border-radius: 5px;
 }
 
-.btn:hover {
-    background: #58a6ff;
+form button:hover {
+    background: var(--secondary-color);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #161b22;
+    padding: 20px 0;
+    background: #111111;
+    color: var(--text-color);
+}
+
+/* Animation d'apparition */
+.project-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

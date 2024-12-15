@@ -1,29 +1,32 @@
-// Scroll Animation
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
+// Défilement fluide pour les liens d'ancrage
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".nav-links a, .scroll-link");
 
-    window.addEventListener('scroll', () => {
-        const triggerBottom = window.innerHeight * 0.8;
+    links.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
 
-        sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-
-            if (sectionTop < triggerBottom) {
-                section.classList.add('show');
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: "smooth"
+                });
             }
         });
     });
 });
 
-// Smooth Scroll for Navigation Links
-const navLinks = document.querySelectorAll('.nav-links a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        targetElement.scrollIntoView({ behavior: 'smooth' });
+// Animation d'apparition progressive des projets
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
     });
+});
+
+document.querySelectorAll(".project-card").forEach(card => {
+    observer.observe(card);
 });

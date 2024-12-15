@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Navigation -->
     <header>
         <nav class="navbar">
             <div class="logo">RC</div>
@@ -23,61 +23,66 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-container">
-            <div class="hero-text">
-                <h1><span class="highlight">REDHA CHENOUF</span></h1>
+        <div class="container hero-content">
+            <div class="text">
+                <h1><span class="red-line">REDHA</span><br><span class="blue-line">CHENOUF</span></h1>
                 <h2>ADMINISTRATEUR RÉSEAUX, SYSTÈMES ET CYBERSÉCURITÉ</h2>
                 <p>Je travaille sur la protection des systèmes et la sécurité des infrastructures réseaux.</p>
-                <div class="hero-buttons">
+                <div class="buttons">
                     <a href="CV.pdf" class="btn">MON CV</a>
-                    <a href="https://www.linkedin.com/in/redha-c-75187032a" class="btn">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/redha-c" class="btn">LinkedIn</a>
                     <a href="https://github.com/redhachenouf" class="btn">GitHub</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="img/photo.png" alt="Redha Chenouf">
+            <div class="profile-pic">
+                <img src="img/pics.png" alt="Redha Chenouf">
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2 class="section-title">MES PROJETS</h2>
-        <div class="project-container">
-            <div class="project">
-                <img src="img/pcs.png" alt="Paris Caretaker Service">
-                <h3>Paris Caretaker Service</h3>
-                <p>Site web sécurisé avec Stripe et segmentation réseau (DMZ, VLAN).</p>
-            </div>
-            <div class="project">
-                <img src="img/audit.jpg" alt="Audit de Sécurité">
-                <h3>Audit de Sécurité</h3>
-                <p>Analyse de vulnérabilités avec Nmap, exploitation via Metasploit et Wireshark.</p>
-            </div>
-            <div class="project">
-                <img src="img/navy.jpg" alt="Jeu My Navy">
-                <h3>Jeu My Navy</h3>
-                <p>Jeu multijoueur en C avec gestion des connexions réseau.</p>
+        <div class="container">
+            <h2>MES PROJETS</h2>
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="img/pcs.png" alt="PCS">
+                    <h3>Paris Caretaker Service</h3>
+                    <p>Site web sécurisé avec Stripe et segmentation réseau (DMZ, VLAN).</p>
+                </div>
+                <div class="project-card">
+                    <img src="img/audit.jpg" alt="Audit">
+                    <h3>Audit de Sécurité</h3>
+                    <p>Analyse de vulnérabilités avec Nmap, exploitation via Metasploit et Wireshark.</p>
+                </div>
+                <div class="project-card">
+                    <img src="img/navy.jpg" alt="Jeu My Navy">
+                    <h3>Jeu My Navy</h3>
+                    <p>Jeu multijoueur en C avec gestion des connexions réseau.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <h2 class="section-title">CONTACT</h2>
-        <form action="php/contact.php" method="POST">
-            <input type="text" name="name" placeholder="Nom" required>
-            <input type="email" name="email" placeholder="E-mail" required>
-            <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
-            <button type="submit" class="btn">Envoyer</button>
-        </form>
+        <div class="container">
+            <h2>CONTACT</h2>
+            <form action="php/contact.php" method="POST">
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Redha Chenouf. Tous droits réservés.</p>
+        <div class="container">
+            <p>&copy; 2024 Redha Chenouf. Tous droits réservés.</p>
+        </div>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
