@@ -1,4 +1,4 @@
-// Animation de défilement fluide
+// Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,14 +8,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Effet fade-in sur les sections au défilement
+// Fade-in animation for sections
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
+            entry.target.classList.add("visible");
         }
     });
 }, {
@@ -23,8 +22,6 @@ const observer = new IntersectionObserver(entries => {
 });
 
 sections.forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = "translateY(20px)";
-    section.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+    section.classList.add("hidden");
     observer.observe(section);
 });
