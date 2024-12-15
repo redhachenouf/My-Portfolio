@@ -1,10 +1,11 @@
-/* Global Styles */
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #0d1117;
     color: #c9d1d9;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -12,70 +13,121 @@ h1, h2, h3 {
     color: #58a6ff;
 }
 
-/* Header */
-.header {
-    background-color: #161b22;
-    padding: 10px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav-links a {
+a {
     color: #58a6ff;
     text-decoration: none;
 }
 
-.nav-links a:hover {
-    color: white;
+a:hover {
+    text-decoration: underline;
 }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 60px 0;
+/* Navbar */
+.navbar {
     background-color: #161b22;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    color: #58a6ff;
+}
+
+.nav-links li a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #161b22;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
 /* Sections */
 section {
-    padding: 40px;
+    padding: 40px 20px;
     text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Projects */
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: center;
+    margin-top: 20px;
 }
 
 .project {
     background: #1f2937;
-    padding: 20px;
-    border-radius: 10px;
+    border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
 }
 
 .project img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* Footer */
+.project h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Contact Section */
+#contact p {
+    margin: 10px 0;
+}
+
+#contact img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 footer {
     background: #161b22;
-    padding: 10px;
     text-align: center;
+    padding: 10px 0;
     color: #8b949e;
 }

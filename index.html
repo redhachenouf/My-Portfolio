@@ -7,79 +7,107 @@
     <title>Portfolio - Redha Chenouf</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="header">
+    <!-- Header -->
+    <header>
         <nav class="navbar">
-            <div class="logo">Redha Chenouf</div>
-            <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="container">
+                <div class="logo">Redha Chenouf</div>
+                <ul class="nav-links">
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Étudiant en administration réseaux, systèmes et cybersécurité</p>
+    <section id="hero">
+        <div class="container">
+            <h1>Bienvenue sur mon Portfolio</h1>
+            <p>Administrateur réseaux, systèmes et cybersécurité</p>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis passionné par la cybersécurité et les infrastructures réseau. Mon objectif est de protéger les systèmes tout en optimisant leurs performances.</p>
+    <section id="about">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <p>Passionné par la cybersécurité et les infrastructures réseaux, je travaille sur la protection des systèmes et l'optimisation des performances.</p>
+        </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <h2>Mes Projets</h2>
-        <div class="project-container">
-            <div class="project">
-                <img src="img/arrow symbol.png" alt="Paris Caretaker Services">
-                <h3>Paris Caretaker Services</h3>
-                <p>Site web sécurisé avec Stripe et segmentation réseau (DMZ, VLAN).</p>
-            </div>
-            <div class="project">
-                <img src="img/github logo.png" alt="Audit de sécurité">
-                <h3>Audit de Sécurité</h3>
-                <p>Scans Nmap, exploitation Metasploit et analyse Wireshark.</p>
-            </div>
-            <div class="project">
-                <img src="img/linkedin logo.webp" alt="Jeu My Navy">
-                <h3>Jeu My Navy</h3>
-                <p>Jeu multijoueur en C avec gestion réseau en temps réel.</p>
+    <section id="projects">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            <div class="project-container">
+                <div class="project">
+                    <img src="img/PCS.png" alt="Paris Caretaker Services">
+                    <h3>Paris Caretaker Services</h3>
+                    <p>Site web sécurisé avec Stripe et segmentation réseau (DMZ, VLAN).</p>
+                </div>
+                <div class="project">
+                    <img src="img/AUDIT.png" alt="Audit de Sécurité">
+                    <h3>Audit de Sécurité</h3>
+                    <p>Analyse de vulnérabilités avec Nmap, exploitation via Metasploit et analyse réseau avec Wireshark.</p>
+                </div>
+                <div class="project">
+                    <img src="img/NAVY.png" alt="Jeu My Navy">
+                    <h3>Jeu My Navy</h3>
+                    <p>Jeu multijoueur en C avec gestion du réseau en temps réel.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <h2>Compétences Techniques</h2>
-        <ul>
-            <li>Pentesting : Metasploit, Nmap, Wireshark</li>
-            <li>Réseaux : VLAN, VPN WireGuard, DMZ</li>
-            <li>Systèmes : Windows Server, Linux</li>
-            <li>Virtualisation : VMware, Docker</li>
-        </ul>
+    <section id="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            <ul>
+                <li>Pentesting : Metasploit, Nmap, Wireshark</li>
+                <li>Réseaux : VLAN, VPN WireGuard, DMZ</li>
+                <li>Systèmes : Windows Server, Linux</li>
+                <li>Virtualisation : VMware, Docker</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email : <a href="mailto:r.chenouf@outlook.com">r.chenouf@outlook.com</a></p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/redha-c-75187032a/">linkedin.com/in/redha-c</a></p>
-        <p>GitHub : <a href="https://github.com/redhachenouf">github.com/redhachenouf</a></p>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:r.chenouf@outlook.com">r.chenouf@outlook.com</a></p>
+            <p>
+                <img src="img/linkedin_logo.png" alt="LinkedIn" width="20"> 
+                <a href="https://www.linkedin.com/in/redha-c-75187032a/">linkedin.com/in/redha-c</a>
+            </p>
+            <p>
+                <img src="img/github_logo.png" alt="GitHub" width="20"> 
+                <a href="https://github.com/redhachenouf">github.com/redhachenouf</a>
+            </p>
+            <form action="php/contact.php" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Redha Chenouf - Tous droits réservés</p>
+        <div class="container">
+            <p>&copy; 2024 Redha Chenouf. Tous droits réservés.</p>
+        </div>
     </footer>
 </body>
 
