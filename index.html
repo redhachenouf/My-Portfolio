@@ -1,107 +1,78 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Redha Chenouf : Cybersécurité, Réseaux, Pentesting">
-    <title>Portfolio - Redha Chenouf</title>
-    <link rel="icon" type="image/png" href="img/croix-logo.png">
+    <title>Portfolio | Redha Chenouf</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/background.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/contact-form.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="png|image" href="/IMAGES/yourlogo.png">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header">
-            <a href="#home">
-                <h2 class="logo">RC</h2>
-            </a>
-            <img src="img/hamburger-icon.png" id="burger" alt="menu-burger">
-            <nav class="nav-links">
-                <a href="#about">À propos</a>
-                <a href="#projects">Projets</a>
-                <a href="#skills">Compétences</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
+
+    <canvas id="matrixCanvas"></canvas>
+    <!-- Matrix -->
+    <script src="/JAVASCRIPT/matrix.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">{Portfolio} </a>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:1;" class="active">Home</a>
+            <a href="#about" style="--i:2;">About</a>
+            <a href="#skill" style="--i:3;">Skills</a>
+            <a href="#project" style="--i:4;">Projects</a>
+            <a href="#contact" style="--i:5;">Contact</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1 data-aos="zoom-in">Bienvenue dans mon monde</h1>
-        <p data-aos="fade-up">Cybersécurité | Réseaux | Pentesting</p>
-        <div class="loading-text">Loading<span class="dots">...</span></div>
-    </section>
+    <section id="home" class="home">
 
-    <!-- About Section -->
-    <section id="about" class="about" data-aos="fade-right">
-        <h2>À propos de moi</h2>
-        <img src="img/pics.png" alt="Redha Chenouf" class="profile-pic">
-        <p>Passionné par la cybersécurité, je me spécialise dans les tests d'intrusion, la configuration réseau et l'administration système.</p>
-    </section>
+        <div class="home-content" data-scroll data-scroll-speed="-5" >
+            <h3 class="mu">Hello, It's me</h3>
+            <h1>Redha Chenouf</h1>
+            <h3>And I'm a <span class="pro-text">
+                <script>
+                   var typed = new Typed(".pro-text", {
+                      strings: [
+                        "Ethical Hacker",
+                        "Pentester",
+                        "Cybersecurity Enthusiast",
+                        "System & Network Administrator",
+                      ],
+                      typeSpeed: 100,   
+                      backSpeed: 100,   
+                      backDelay: 1000,  
+                      loop: true        
+                    });
+                </script>
+            </span></h3>
+            
+            <p>  &emsp; &emsp;This portfolio highlights my passion for cybersecurity, ethical hacking, and network security. <br> <br>
+            </p>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects" data-aos="fade-up">
-        <h2>Projets</h2>
-        <div class="project-list">
-            <div class="project" data-aos="flip-left">
-                <img src="img/audit.jpg" alt="Audit de Sécurité">
-                <h3>Audit de Sécurité</h3>
-                <p>Analyse des vulnérabilités avec Nmap et Metasploit.</p>
+            <div class="home-sci">
+                <a href="https://github.com/redhachenouf" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/redha-c-75187032a/" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://wa.me/+33609415905" target="_blank"><i class='bx bxl-whatsapp'></i></a>
             </div>
-            <div class="project" data-aos="flip-left">
-                <img src="img/dmz.png" alt="Réseau DMZ">
-                <h3>Réseau DMZ</h3>
-                <p>Configuration de pare-feux et mise en place d'une DMZ sécurisée.</p>
-            </div>
-            <div class="project" data-aos="flip-left">
-                <img src="img/navy.jpg" alt="Jeu Multijoueur">
-                <h3>Jeu Multijoueur</h3>
-                <p>Développement d'un jeu réseau en C avec SDL.</p>
+           <a href="/IMAGES/CV Redha CHENOUF.pdf" class="btn-box" download="Redha_Chenouf_CV">Download CV</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="/IMAGES/pics.png" alt="Redha Chenouf">
+                </div>
             </div>
         </div>
+
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills" data-aos="fade-left">
-        <h2>Compétences</h2>
-        <ul>
-            <li><i class="fas fa-shield-alt"></i> Pentesting : Metasploit, Nmap, Wireshark</li>
-            <li><i class="fas fa-network-wired"></i> Réseaux : VLAN, DMZ, VPN WireGuard</li>
-            <li><i class="fas fa-server"></i> Systèmes : Windows Server, Linux</li>
-            <li><i class="fas fa-code"></i> Développement : PHP, JavaScript</li>
-        </ul>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact" data-aos="fade-up">
-        <h2>Contact</h2>
-        <form action="php/contact.php" method="POST">
-            <input type="text" name="name" placeholder="Votre nom" required>
-            <input type="email" name="email" placeholder="Votre email" required>
-            <textarea name="message" placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2024 Redha Chenouf | Portfolio Cybersécurité</p>
-    </footer>
-
-    <!-- JS -->
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-</body>
+</body> 
 </html>

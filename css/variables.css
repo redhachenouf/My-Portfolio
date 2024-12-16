@@ -1,9 +1,0 @@
-:root {
-    --primary-color: #00ff00; /* Vert fluorescent */
-    --background-color: #000000; /* Noir */
-    --text-color: #ffffff; /* Blanc */
-    --secondary-color: #008080; /* Bleu sarcelle */
-    --hover-color: #ff0000; /* Rouge vif */
-    --border-color: rgba(0, 255, 0, 0.5); /* Vert translucide */
-    --font-family: "Courier New", Courier, monospace;
-}
