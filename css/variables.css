@@ -1,7 +1,9 @@
 :root {
-    --neon-green: #00ff00;
-    --dark-bg: #111111;
-    --soft-white: #f9f9f9;
-    --dark-gray: #1a1a1a;
-    --shadow-green: 0 0 10px rgba(0, 255, 0, 0.8);
+    --primary-color: #00ff00; /* Vert fluorescent */
+    --background-color: #000000; /* Noir */
+    --text-color: #ffffff; /* Blanc */
+    --secondary-color: #008080; /* Bleu sarcelle */
+    --hover-color: #ff0000; /* Rouge vif */
+    --border-color: rgba(0, 255, 0, 0.5); /* Vert translucide */
+    --font-family: "Courier New", Courier, monospace;
 }
